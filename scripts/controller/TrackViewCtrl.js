@@ -230,7 +230,7 @@ function(Util, Model, Parser, vextab){
 
         window.addEventListener('resize', onResize);
         var onResize = function updateResize() {
-            canvas.width = $(".canvas-layers").innerWidth() - 100;
+            canvas.width = $(".canvas-layers").innerWidth() - 120;
             self.update();
         };
         onResize();
