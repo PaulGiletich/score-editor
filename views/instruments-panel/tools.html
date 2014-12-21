@@ -1,18 +1,19 @@
 <tabset justified="true">
     <tab heading="Tools">
-        <div class="instruments panel panel-default">
+		
+		<div class="instruments panel panel-default">
             <div class="instrument" >
                 Tickable type:<br>
                 <div class="tickables btn-group">
-                    <button class="tickable note btn btn-default active">Note</button>
-                    <button class="tickable rest btn btn-default" >Rest</button>
+                    <button class="tickable note btn btn-default active" title="Нота">Note</button>
+                    <button class="tickable rest btn btn-default" title="Пауза">Rest</button>
                 </div>
             </div>
 
             <div class="instrument" >
                 Duration:<br>
                 <div class="durations btn-group">
-                    <button ng-repeat="i in [1,2,4,8,16,32]"
+                    <button title="Длительность нот" ng-repeat="i in [1,2,4,8,16,32]"
                             class="item btn btn-default {{editor.noteDuration == i ? 'active': ''}}"
                             value="{{i}}"
                             ng-click="editor.setNoteDuration(i)"
@@ -24,52 +25,64 @@
                 Accidentals:<br>
                 <div class="accidentals btn-group">
                     <button class="accidental-sharp item btn btn-default">#</button>
-                    <button class="accidental-none item btn btn-default">none</button>
+                    <button class="accidental-none item btn btn-default" title="qqqqqqq">none</button>
                     <button class="accidental-flat item btn btn-default">b</button>
                 </div>
             </div>
 <!--
 -->
+
+<script src="lib/sweet-alert.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
+
+			
 			<script src="/scripts/info.js"></script>						
 			
 			<div class="instrument" >
 			Information about instruments: <br>
 			<FORM name="myForm">
-				<select id="mySelectId" name="mySelect">					
-					<option value="str1"> Acoustic Grand Piano </option>
-					<option value="str2"> Sitar </option>
-					<option value="str3"> Banjo </option>
-					<option value="str4"> Shamisen </option>
-					<option value="str5"> Kalimba </option>
-					<option value="str6"> Fiddle </option>
-					<option value="str7"> Agogo </option>
-					<option value="str8"> Woodblock </option>
-					<option value="str9"> Marimba </option>
-					<option value="str10"> Accordion </option>
-					<option value="str11"> Harmonica </option>
+				<select id="mySelectId" name="mySelect" title="Получение информации об инструменте">								
+					<option value="AcousticGrandPiano">AcousticGrandPiano</option>
+					<option value="Sitar">Sitar</option>
+					<option value="Banjo">Banjo</option>
+					<option value="Shamisen">Shamisen</option>
+					<option value="Kalimba">Kalimba</option>
+					<option value="Fiddle">Fiddle</option>
+					<option value="Agogo">Agogo</option>
+					<option value="Woodblock">Woodblock</option>
+					<option value="Marimba">Marimba</option>
+					<option value="Accordion">Accordion</option>
+					<option value="Harmonica">Harmonica</option>
+					<option value="Violin">Violin</option>
+					<option value="Contrabass">Contrabass</option>
+					<option value="Tuba">Tuba</option>
+					<option value="Flute">Flute</option>
+					<option value="Timpani">Timpani</option>
 				</select>
 			</FORM>									
 
-			         <input type="button" onclick="count_rabbits()" value="Ok"}>
+			         <input type="button" title="qqqqqq" onclick="accept_info()" value="Ok"}>
             </div>
 <!--
 -->
 
+			
+			
             <div class="instrument" >
                 Instrument:<br>
 
-                <select class="form-control" ng-model="activeTrack.instrument"
+                <select class="form-control" title="Выбор инструмента" ng-model="activeTrack.instrument"
                         ng-options="instr.instrument for (index, instr) in editor.getAllInstruments()"></select>
             </div>
 
             <div class="row instrument">
                 <div class="col-md-6" >
                     Tempo:<br>
-                    <input style="width: 100px" type="number" class="form-control" ng-model="song.tempo"/>
+                    <input style="width: 100px" title="Установка темпа" type="number" class="form-control" ng-model="song.tempo"/>
                 </div>
                 <div class="col-md-6" >
                     Octave shift:<br>
-                    <input style="width: 100px" type="number" class="form-control" ng-model="activeTrack.options.octaveShift"/>
+                    <input style="width: 100px" title="Установка октав" type="number" class="form-control" ng-model="activeTrack.options.octaveShift"/>
                 </div>
             </div>
         </div>
