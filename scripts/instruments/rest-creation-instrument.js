@@ -8,7 +8,7 @@ function(Model, SongPlayer, BasicInstrument){
 
         emptySpaceClicked (point) {
             super.emptySpaceClicked(point);
-            var rest = new Model.Rest(this.editor.noteDuration);
+            var rest = new Model.Rest(this.editor.restDuration);
 
             var prevNote = this.editor.view.findPreviousNote(point);
             //if track empty ( todo )

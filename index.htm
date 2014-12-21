@@ -13,10 +13,6 @@
 
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!--<script src="bower_components/vextab/vextab_parser.js"></script>-->
-    <!--<script src="bower_components/vextab/vextab.js"></script>-->
-    <!--<script src="bower_components/vextab/artist.js"></script>-->
-
     <script src="bower_components/MIDI.js/build/MIDI.min.js"></script>
     <script src="bower_components/MIDI.js/inc/Base64.js" type="text/javascript"></script>
     <script src="bower_components/MIDI.js/inc/base64binary.js" type="text/javascript"></script>
@@ -38,6 +34,7 @@
                         <div class="instrument" >
                             <button data-toggle="modal" data-target="#keyboardModal" class="btn btn-default">MIDI keyboard</button>
                             <button data-toggle="modal" data-target="#fretboardModal" class="btn btn-default" >Guitar fretboard</button>
+							<button data-toggle="modal" data-target="#drumkitModal" class="btn btn-default" >   Drumkit   </button>
                         </div>
                     </div>
                 </tab>
@@ -78,6 +75,13 @@
     <div class="modal-dialog" style="width: 1200px">
         <div class="modal-content">
             <ng-include src="'views/fretboard.html'"></ng-include>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="drumkitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 1800px">
+        <div class="modal-content">
+            <ng-include src="'views/drumkit.html'"></ng-include>
         </div>
     </div>
 </div>

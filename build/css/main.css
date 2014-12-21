@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  height: 90%;
 }
 body {
   padding: 15px 15px 0;
@@ -37,6 +37,9 @@ body {
 .instrument-board {
   margin: 20px;
 }
+.instrument-board1 {
+  margin: 19px;
+}
 .modal-content {
   background-color: #424242;
 }
@@ -54,24 +57,22 @@ td.fret-string {
   height: 141px;
   margin: 0px;
 }
-/*p{
-	margin:0px;
-	padding:4px 0px;
-	border:1px solid #FFFFFF;
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}*/
-/*.one, .two, .three, .four, .five, .six {
-	background-color:red;
-}*/
+
 .fretboard {
-  /*background-size:100% auto;*/
   width: 1018px;
   background: url(../../images/fretboard.jpg) no-repeat center;
   position: relative;
   display: block;
   height: 141px;
+  margin: 0px;
+  padding: 0px;
+}
+.drumkit{
+  width: 800px;
+  background: url(../../images/drumkit.jpg) no-repeat center;
+  position: relative;
+  display: block;
+  height: 600px;
   margin: 0px;
   padding: 0px;
 }
@@ -216,18 +217,6 @@ td.fret-string {
   left: 97.457%;
   width: 2.543%;
 }
-/*.one .two .three .four .five{
-	width:100%;
-}
-.one, .two, .three, .four, .five, .six p{
-	border-right: 1px solid #FFFFFF;
-}
-.one, .two, .three, .four, .five p{
-	border-bottom: 1px solid #FFFFFF;
-}
-/*.one p{
-padding: 12px 0px;
-}*/
 
 .switch-checkbox {
   display: none;
