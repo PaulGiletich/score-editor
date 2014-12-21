@@ -10,6 +10,7 @@ define(function(require){
         TimeSignature:   require('scripts/model/time-signature'),
         Rest    :   require('scripts/model/rest'),
         Song    :   require('scripts/model/song'),
+		clef    :   require('scripts/model/clef'),
         Instrument:   require('scripts/model/instrument'),
         Track   :   require('es6!scripts/model/track')
     };
