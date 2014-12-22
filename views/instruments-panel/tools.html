@@ -51,15 +51,9 @@
                 </div>
             </div>
 			<div class="instrument" >
-				<button id="buttonInstrument" data-toggle="modal" data-target="#keyboardModal" class="btn btn-default" onclick="Ctrl()" value="{{activeTrack.instrument.instrument}}">{{activeTrack.instrument.instrument}}</button>
-			</div>
-			<div class="modal fade" id="keyboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog" style="width: 785px">
-					<div  class="modal-content">
-					<ng-include src="'views/keyboard.html'"></ng-include>
-					</div>
-				</div> 
-			</div>
+				<button id="buttonInstrument" data-toggle="modal" data-target="#keyboardModal" class="btn btn-default" value="{{activeTrack.instrument.instrument}}">{{activeTrack.instrument.instrument}}</button>
+				<ng-include src="'views/select.html'"></ng-include>
+			</div>			
         </div>
     </tab>
 </tabset>
