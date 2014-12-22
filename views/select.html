@@ -1,0 +1,49 @@
+<div ng-switch on="activeTrack.instrument.id">
+	<div ng-switch-when="acoustic_grand_piano">			
+		<div class="modal fade" id="keyboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 785px">
+				<div  class="modal-content">
+					<ng-include src="'views/keyboard.html'"></ng-include>
+				</div>
+			</div> 
+		</div>		
+	</div>
+	
+	<div ng-switch-when="bright_acoustic_piano">			
+		<div class="modal fade" id="keyboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 785px">
+				<div  class="modal-content">
+					<ng-include src="'views/keyboard.html'"></ng-include>
+				</div>
+			</div> 
+		</div>		
+	</div>
+
+	<div ng-switch-when="acoustic_guitar_nylon">		
+		<div class="modal fade" id="keyboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 1200px">
+				<div  class="modal-content">
+					<ng-include src="'views/fretboard.html'"></ng-include>
+				</div>
+			</div> 
+		</div>		
+	</div>
+	
+	<div ng-switch-when="acoustic_guitar_steel">		
+		<div class="modal fade" id="keyboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 1200px">
+				<div  class="modal-content">
+					<ng-include src="'views/fretboard.html'"></ng-include>
+				</div>
+			</div> 
+		</div>		
+	</div>
+	
+	<div ng-switch-default >
+				<div class="modal fade" id="keyboardModal">
+				
+				</div>
+			</div> 
+		</div>	
+	</div>
+</div>
